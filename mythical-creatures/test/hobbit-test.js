@@ -5,6 +5,7 @@ describe('Hobbit', function() {
 
   it.skip('should be a function', function() {
     assert.isFunction(Hobbit);
+    //is Hobbit a function?
   });
 
   it.skip('should instantiate our good friend, Hobbit', function() {
@@ -15,17 +16,25 @@ describe('Hobbit', function() {
   it.skip('should have a name', function() {
     var hobbit = new Hobbit('Bilbo');
     assert.equal(hobbit.name, 'Bilbo');
+    //create a key of name
+    //has an argument of 'Bilbo'
+    //needs a parameter to be dynamic
   });
 
   it.skip('should have an unadventurous disposition', function() {
     var hobbit = new Hobbit('Samwise');
     assert.equal(hobbit.disposition, 'homebody');
+    //create a key of disposition
+    //has an argument
+    //needs a parameter to match
   });
 
   it.skip('should have an age', function() {
     var hobbit = new Hobbit('Meriadoc');
     assert.equal(hobbit.name, 'Meriadoc');
     assert.equal(hobbit.age, 0);
+    //create a key of age
+    //assign it to 0
   });
 
   it.skip('should have gained 1 year after every birthday', function() {
@@ -35,11 +44,13 @@ describe('Hobbit', function() {
     hobbit.celebrateBirthday();
     hobbit.celebrateBirthday();
     assert.equal(hobbit.age, 3);
+    //add an incrementor
   });
 
   function timeTravel(num, hobbit) {
     for (var i = 0; i < num; i++) {
       hobbit.celebrateBirthday();
+      //calling the method celebrateBirthday()
     };
   };
 
@@ -48,6 +59,7 @@ describe('Hobbit', function() {
     timeTravel(32, hobbit);
     assert.equal(hobbit.age, 32);
     assert.equal(hobbit.adult, false);
+    //create a key of adult
   });
 
   it.skip('should be considered an adult at 33', function() {
@@ -60,17 +72,20 @@ describe('Hobbit', function() {
   it.skip('should be short', function() {
     var hobbit = new Hobbit('Samwise');
     assert.equal(hobbit.isShort, true)
+    //create a key of isShort
   });
 
   it.skip('should be considered old at the age of 101', function() {
     var hobbit = new Hobbit('Samwise');
     assert.equal(hobbit.old, false)
+    //create key of old
 
     timeTravel(100, hobbit);
     assert.equal(hobbit.old, false)
 
     hobbit.celebrateBirthday();
     assert.equal(hobbit.old, true)
+    //inside the celebrateBirthday method
   });
 
   it.skip('should have the ring if its name is Frodo', function() {
@@ -79,5 +94,6 @@ describe('Hobbit', function() {
 
     assert.equal(hobbit1.hasRing, true)
     assert.equal(hobbit2.hasRing, false)
+    //create key of hasRing
   });
 });
